@@ -1,0 +1,52 @@
+nuget {
+    nuspec {
+        id = protobuf-vc100;
+        version : 2.5.0.0;
+        title : Protocol Buffers v100;
+        authors : google;
+        owners : ksmyth;
+        licenseUrl : "http://protobuf.googlecode.com/svn/trunk/COPYING.txt";
+        projectUrl: "https://code.google.com/p/protobuf/";
+        iconUrl: "https://ssl.gstatic.com/codesite/ph/images/search-48.gif";
+        requireLicenseAcceptance:false;
+        summary: Protocol Buffers (C++) vc100 libraries;
+
+        description: @"Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.";
+        releaseNotes: "";
+        copyright: Copyright 2013;
+        tags: { native, cpp, protobuf, serialization };
+    }
+    dependencies {
+        packages : {
+            protobuf/2.5.0.0,
+        };
+    }
+
+
+    files {
+        vcpdb += {
+            // #flatten = true;
+            #destination = ${d_lib};
+        };
+
+        [x64,v100,release] { 
+            lib += vsprojects\x64\Release\libprotobuf.lib;
+            vcpdb += vsprojects\x64\Release\vc100.pdb;
+        }
+
+        [x64,v100,debug] { 
+            lib += vsprojects\x64\Debug\libprotobuf.lib;
+            vcpdb += vsprojects\x64\Debug\vc100.pdb;
+        }
+
+        [win32,v100,release] { 
+            lib += vsprojects\Release\libprotobuf.lib;
+            vcpdb += vsprojects\Release\vc100.pdb;
+        }
+
+        [win32,v100,debug] { 
+            lib += vsprojects\Debug\libprotobuf.lib;
+            vcpdb += vsprojects\Debug\vc100.pdb;
+        }
+    }
+}
