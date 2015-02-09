@@ -1,6 +1,5 @@
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe vsprojects\protobuf.sln /t:libprotobuf /p:Configuration=Release;Platform=x64
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe vsprojects\protobuf.sln /t:libprotobuf /p:Configuration=Debug;Platform=x64
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe vsprojects\protobuf.sln /t:libprotobuf /p:Configuration=Release;Platform=win32
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe vsprojects\protobuf.sln /t:libprotobuf /p:Configuration=Debug;Platform=win32
-powershell -ExecutionPolicy ByPass Write-NuGetPackage .\protobuf.autopkg
-powershell -ExecutionPolicy ByPass Write-NuGetPackage .\protobuf-vc110.autopkg
+"C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe" vsprojects\protobuf.sln /t:libprotobuf:Rebuild /p:Configuration=Release;Platform=x64
+"C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe" vsprojects\protobuf.sln /t:libprotobuf:Rebuild /p:Configuration=Debug;Platform=x64
+"C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe" vsprojects\protobuf.sln /t:libprotobuf:Rebuild /p:Configuration=Release;Platform=win32
+"C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe" vsprojects\protobuf.sln /t:libprotobuf:Rebuild /p:Configuration=Debug;Platform=win32
+powershell -ExecutionPolicy ByPass Write-NuGetPackage .\protobuf-v120.autopkg
