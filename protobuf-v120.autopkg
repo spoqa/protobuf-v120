@@ -1,52 +1,51 @@
 nuget {
     nuspec {
-        id = protobuf-vc110;
+        id = protobuf-v120;
         version : 2.5.0.0;
-        title : Protocol Buffers v110;
+        title : Protocol Buffers v120;
         authors : google;
-        owners : longfin;
+        owners : sj.choi;
         licenseUrl : "http://protobuf.googlecode.com/svn/trunk/COPYING.txt";
         projectUrl: "https://code.google.com/p/protobuf/";
         iconUrl: "https://ssl.gstatic.com/codesite/ph/images/search-48.gif";
         requireLicenseAcceptance:false;
-        summary: Protocol Buffers (C++) vc110 libraries;
+        summary: Protocol Buffers (C++) v120 libraries;
 
         description: @"Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.";
         releaseNotes: "";
-        copyright: Copyright 2014;
+        copyright: Copyright 2015;
         tags: { native, cpp, protobuf, serialization };
-    }
-    dependencies {
-        packages : {
-            protobuf/2.5.0.0,
-        };
     }
 
 
     files {
+		nestedInclude : {
+			#destination = ${d_include}google\protobuf;
+			"src\google\protobuf\**\*.h",
+		};
         vcpdb += {
             // #flatten = true;
             #destination = ${d_lib};
         };
 
-        [x64,v110,release] { 
+        [x64,v120,release] { 
             lib += vsprojects\x64\Release\libprotobuf.lib;
-            vcpdb += vsprojects\x64\Release\vc110.pdb;
+            vcpdb += vsprojects\x64\Release\vc120.pdb;
         }
 
-        [x64,v110,debug] { 
+        [x64,v120,debug] { 
             lib += vsprojects\x64\Debug\libprotobuf.lib;
-            vcpdb += vsprojects\x64\Debug\vc110.pdb;
+            vcpdb += vsprojects\x64\Debug\vc120.pdb;
         }
 
-        [win32,v110,release] { 
+        [win32,v120,release] { 
             lib += vsprojects\Release\libprotobuf.lib;
-            vcpdb += vsprojects\Release\vc110.pdb;
+            vcpdb += vsprojects\Release\vc120.pdb;
         }
 
-        [win32,v110,debug] { 
+        [win32,v120,debug] { 
             lib += vsprojects\Debug\libprotobuf.lib;
-            vcpdb += vsprojects\Debug\vc110.pdb;
+            vcpdb += vsprojects\Debug\vc120.pdb;
         }
     }
 }
