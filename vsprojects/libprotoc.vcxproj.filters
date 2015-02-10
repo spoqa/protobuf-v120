@@ -72,6 +72,9 @@
     <ClInclude Include="..\src\google\protobuf\compiler\cpp\cpp_string_field.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\google\protobuf\compiler\java\java_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_enum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -90,7 +93,13 @@
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_generator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\google\protobuf\compiler\java\java_generator_factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\google\protobuf\compiler\java\java_lazy_message_field.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_message.h">
@@ -99,10 +108,16 @@
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_message_field.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\google\protobuf\compiler\java\java_name_resolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_primitive_field.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\google\protobuf\compiler\java\java_shared_code_generator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\google\protobuf\compiler\java\java_string_field.h">
@@ -173,6 +188,9 @@
     <ClCompile Include="..\src\google\protobuf\compiler\cpp\cpp_string_field.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\google\protobuf\compiler\java\java_context.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_enum.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -191,7 +209,13 @@
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_generator.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\google\protobuf\compiler\java\java_generator_factory.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_helpers.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\google\protobuf\compiler\java\java_lazy_message_field.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_message.cc">
@@ -200,10 +224,16 @@
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_message_field.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\google\protobuf\compiler\java\java_name_resolver.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_primitive_field.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_service.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\google\protobuf\compiler\java\java_shared_code_generator.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_string_field.cc">
