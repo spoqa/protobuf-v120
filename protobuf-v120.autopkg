@@ -1,18 +1,18 @@
 nuget {
     nuspec {
         id = protobuf-v120;
-        version : 2.5.0.0;
+        version : 2.6.1;
         title : Protocol Buffers v120;
         authors : google;
         owners : sj.choi;
-        licenseUrl : "http://protobuf.googlecode.com/svn/trunk/COPYING.txt";
-        projectUrl: "https://code.google.com/p/protobuf/";
+        licenseUrl : "https://raw.githubusercontent.com/google/protobuf/v2.6.1/LICENSE";
+        projectUrl: "https://github.com/spoqa/protobuf-v120";
         iconUrl: "https://ssl.gstatic.com/codesite/ph/images/search-48.gif";
         requireLicenseAcceptance:false;
         summary: Protocol Buffers (C++) v120 libraries;
 
-        description: @"Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.";
-        releaseNotes: "";
+        description: @"Protocol Buffers - Google's data interchange format";
+        releaseNotes: "https://raw.githubusercontent.com/google/protobuf/v2.6.1/CHANGES.txt";
         copyright: Copyright 2015;
         tags: { native, cpp, protobuf, serialization };
     }

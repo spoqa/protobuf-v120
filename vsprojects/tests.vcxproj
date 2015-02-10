@@ -57,28 +57,28 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</LinkIncremental>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <CustomBuildStep>
-      <Message>
-      </Message>
-      <Command>
-      </Command>
-      <Inputs>%(Inputs)</Inputs>
-      <Outputs>%(Outputs)</Outputs>
+      <Message />
+      <Command />
     </CustomBuildStep>
     <ClCompile>
       <AdditionalOptions>/wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305 %(AdditionalOptions)</AdditionalOptions>
@@ -88,8 +88,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
@@ -105,8 +104,6 @@
       </Message>
       <Command>
       </Command>
-      <Inputs>%(Inputs)</Inputs>
-      <Outputs>%(Outputs)</Outputs>
     </CustomBuildStep>
     <ClCompile>
       <AdditionalOptions>/wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305 %(AdditionalOptions)</AdditionalOptions>
@@ -127,20 +124,15 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <CustomBuildStep>
-      <Message>
-      </Message>
-      <Command>
-      </Command>
-      <Inputs>%(Inputs)</Inputs>
-      <Outputs>%(Outputs)</Outputs>
+      <Message />
+      <Command />
     </CustomBuildStep>
     <ClCompile>
       <AdditionalOptions>/wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>../src;.;../gtest/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_VARIADIC_MAX=10;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
@@ -158,8 +150,6 @@
       </Message>
       <Command>
       </Command>
-      <Inputs>%(Inputs)</Inputs>
-      <Outputs>%(Outputs)</Outputs>
     </CustomBuildStep>
     <ClCompile>
       <AdditionalOptions>/wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305 %(AdditionalOptions)</AdditionalOptions>
@@ -179,11 +169,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="google\protobuf\compiler\cpp\cpp_test_bad_identifiers.pb.h" />
+    <ClInclude Include="..\src\google\protobuf\compiler\mock_code_generator.h" />
     <ClInclude Include="..\src\google\protobuf\testing\file.h" />
     <ClInclude Include="..\src\google\protobuf\testing\googletest.h" />
     <ClInclude Include="..\src\google\protobuf\test_util.h" />
-    <ClInclude Include="..\src\google\protobuf\compiler\mock_code_generator.h" />
+    <ClInclude Include="google\protobuf\compiler\cpp\cpp_test_bad_identifiers.pb.h" />
     <ClInclude Include="google\protobuf\unittest.pb.h" />
     <ClInclude Include="google\protobuf\unittest_custom_options.pb.h" />
     <ClInclude Include="google\protobuf\unittest_embed_optimize_for.pb.h" />
@@ -191,44 +181,47 @@
     <ClInclude Include="google\protobuf\unittest_import_public.pb.h" />
     <ClInclude Include="google\protobuf\unittest_lite_imports_nonline.pb.h" />
     <ClInclude Include="google\protobuf\unittest_mset.pb.h" />
-    <ClInclude Include="google\protobuf\unittest_optimize_for.pb.h" />
     <ClInclude Include="google\protobuf\unittest_no_generic_services.pb.h" />
+    <ClInclude Include="google\protobuf\unittest_optimize_for.pb.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\google\protobuf\io\coded_stream_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\compiler\command_line_interface_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\compiler\mock_code_generator.cc" />
-    <ClCompile Include="..\src\google\protobuf\stubs\common_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\compiler\cpp\cpp_bootstrap_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\compiler\cpp\cpp_unittest.cc" />
-    <ClCompile Include="google\protobuf\compiler\cpp\cpp_test_bad_identifiers.pb.cc" />
     <ClCompile Include="..\src\google\protobuf\compiler\cpp\cpp_plugin_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\compiler\java\java_plugin_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\compiler\cpp\cpp_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\compiler\importer_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\compiler\java\java_doc_comment_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\compiler\java\java_plugin_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\compiler\mock_code_generator.cc" />
+    <ClCompile Include="..\src\google\protobuf\compiler\parser_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\compiler\python\python_plugin_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\descriptor_database_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\descriptor_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\dynamic_message_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\extension_set_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\testing\file.cc" />
     <ClCompile Include="..\src\google\protobuf\generated_message_reflection_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\testing\googletest.cc" />
-    <ClCompile Include="..\src\google\protobuf\compiler\importer_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\message_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\stubs\once_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\compiler\parser_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\coded_stream_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\io\printer_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\tokenizer_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\zero_copy_stream_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\message_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\reflection_ops_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\repeated_field_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\repeated_field_reflection_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\stubs\structurally_valid_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\repeated_field_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\stubs\common_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\stubs\once_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\stubs\stringprintf_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\stubs\structurally_valid_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\stubs\strutil_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\stubs\template_util_unittest.cc" />
     <ClCompile Include="..\src\google\protobuf\stubs\type_traits_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\stubs\strutil_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\testing\file.cc" />
+    <ClCompile Include="..\src\google\protobuf\testing\googletest.cc" />
     <ClCompile Include="..\src\google\protobuf\test_util.cc" />
     <ClCompile Include="..\src\google\protobuf\text_format_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\io\tokenizer_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\unknown_field_set_unittest.cc" />
+    <ClCompile Include="..\src\google\protobuf\wire_format_unittest.cc" />
+    <ClCompile Include="google\protobuf\compiler\cpp\cpp_test_bad_identifiers.pb.cc" />
     <ClCompile Include="google\protobuf\unittest.pb.cc" />
     <ClCompile Include="google\protobuf\unittest_custom_options.pb.cc" />
     <ClCompile Include="google\protobuf\unittest_embed_optimize_for.pb.cc" />
@@ -236,11 +229,8 @@
     <ClCompile Include="google\protobuf\unittest_import_public.pb.cc" />
     <ClCompile Include="google\protobuf\unittest_lite_imports_nonlite.pb.cc" />
     <ClCompile Include="google\protobuf\unittest_mset.pb.cc" />
-    <ClCompile Include="google\protobuf\unittest_optimize_for.pb.cc" />
     <ClCompile Include="google\protobuf\unittest_no_generic_services.pb.cc" />
-    <ClCompile Include="..\src\google\protobuf\unknown_field_set_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\wire_format_unittest.cc" />
-    <ClCompile Include="..\src\google\protobuf\io\zero_copy_stream_unittest.cc" />
+    <ClCompile Include="google\protobuf\unittest_optimize_for.pb.cc" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\src\google\protobuf\compiler\cpp\cpp_test_bad_identifiers.proto">
@@ -387,24 +377,6 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">google\protobuf\unittest_mset.pb.h;google\protobuf\unittest_mset.pb.cc;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">google\protobuf\unittest_mset.pb.h;google\protobuf\unittest_mset.pb.cc;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\src\google\protobuf\unittest_optimize_for.proto">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
-    </CustomBuild>
     <CustomBuild Include="..\src\google\protobuf\unittest_no_generic_services.proto">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating unittest_no_generic_services.pb.{h,cc}...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating unittest_no_generic_services.pb.{h,cc}...</Message>
@@ -422,6 +394,24 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">google\protobuf\unittest_no_generic_services.pb.h;google\protobuf\unittest_no_generic_services.pb.cc;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">google\protobuf\unittest_no_generic_services.pb.h;google\protobuf\unittest_no_generic_services.pb.cc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\google\protobuf\unittest_optimize_for.proto">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating unittest_optimize_for.pb.{h,cc}...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\protoc -I../src --cpp_out=. ../src/google/protobuf/unittest_optimize_for.proto
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">google\protobuf\unittest_optimize_for.pb.h;google\protobuf\unittest_optimize_for.pb.cc;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
